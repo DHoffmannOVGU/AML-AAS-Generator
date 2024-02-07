@@ -1,0 +1,137 @@
+{
+    "assetAdministrationShells": [
+        {
+            "idShort": "FB1_AAS",
+            "id": "https://example.com/ids/aas/3485_0180_1042_5477",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://example.com/ids/asset/3485_0180_1042_5477"
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5477"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5478"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5479"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        }
+    ],
+    "submodels": [
+        {
+            "idShort": "MechanicalView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5477",
+            "submodelElements": [
+                {
+                    "idShort": "Length",
+                    "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                            {
+                                "type": "ConceptDescription",
+                                "value": "https://example.com/ids/cd/8471_0170_2042_6911"
+                            }
+                        ]
+                    },
+                    "embeddedDataSpecifications": [],
+                    "valueType": "xs:string",
+                    "value": "100",
+                    "modelType": "Property"
+                }
+            ],
+            "modelType": "Submodel"
+        },
+        {
+            "idShort": "AutomationView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5478",
+            "submodelElements": [
+                {
+                    "idShort": "ControlProtocol",
+                    "value": [
+                        {
+                            "idShort": "ControlVariable",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "idShort": "CommunicationProtocol",
+                            "value": {
+                                "type": "ModelReference",
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "value": "(https://example.com/ids/sm/3485_0180_1042_5478)"
+                                    },
+                                    {
+                                        "type": "Property",
+                                        "value": "(ControlVariable)"
+                                    }
+                                ]
+                            },
+                            "modelType": "ReferenceElement"
+                        }
+                    ],
+                    "modelType": "SubmodelElementCollection"
+                }
+            ],
+            "modelType": "Submodel"
+        },
+        {
+            "idShort": "ElectricalView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5479",
+            "modelType": "Submodel"
+        }
+    ],
+    "conceptDescriptions": [
+        {
+            "idShort": "UnitLength",
+            "id": "https://example.com/ids/cd/8471_0170_2042_6911",
+            "embeddedDataSpecifications": [
+                {
+                    "dataSpecification": {
+                        "type": "ExternalReference",
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+                            }
+                        ]
+                    },
+                    "dataSpecificationContent": {
+                        "preferredName": [
+                            {
+                                "language": "en?",
+                                "text": ""
+                            }
+                        ],
+                        "unit": "mm",
+                        "modelType": "DataSpecificationIec61360"
+                    }
+                }
+            ],
+            "modelType": "ConceptDescription"
+        }
+    ]
+}

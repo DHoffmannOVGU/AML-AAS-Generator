@@ -1,0 +1,97 @@
+{
+    "assetAdministrationShells": [
+        {
+            "idShort": "FB1_AAS",
+            "id": "https://example.com/ids/aas/3485_0180_1042_5477",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://example.com/ids/asset/3485_0180_1042_5477"
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5477"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5478"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/3485_0180_1042_5479"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        }
+    ],
+    "submodels": [
+        {
+            "idShort": "MechanicalView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5477",
+            "submodelElements": [
+                {
+                    "idShort": "Length",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                }
+            ],
+            "modelType": "Submodel"
+        },
+        {
+            "idShort": "AutomationView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5478",
+            "submodelElements": [
+                {
+                    "idShort": "ControlProtocol",
+                    "value": [
+                        {
+                            "idShort": "ControlVariable",
+                            "valueType": "xs:string",
+                            "modelType": "Property"
+                        },
+                        {
+                            "idShort": "CommunicationProtocol",
+                            "value": {
+                                "type": "ModelReference",
+                                "keys": [
+                                    {
+                                        "type": "Submodel",
+                                        "value": "(https://example.com/ids/sm/3485_0180_1042_5478)"
+                                    },
+                                    {
+                                        "type": "Property",
+                                        "value": "(ControlVariable)"
+                                    }
+                                ]
+                            },
+                            "modelType": "ReferenceElement"
+                        }
+                    ],
+                    "modelType": "SubmodelElementCollection"
+                }
+            ],
+            "modelType": "Submodel"
+        },
+        {
+            "idShort": "ElectricalView",
+            "id": "https://example.com/ids/sm/3485_0180_1042_5479",
+            "modelType": "Submodel"
+        }
+    ],
+    "conceptDescriptions": []
+}

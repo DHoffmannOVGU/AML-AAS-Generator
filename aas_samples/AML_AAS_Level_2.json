@@ -1,0 +1,233 @@
+{
+    "assetAdministrationShells": [
+        {
+            "idShort": "ConveyorSystem_AAS",
+            "id": "https://example.com/ids/aas/4204_7092_1042_4309",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://example.com/ids/asset/7514_7092_1042_8781",
+                "specificAssetIds": [
+                    {
+                        "semanticId": {
+                            "type": "ExternalReference",
+                            "keys": []
+                        },
+                        "name": "IFA",
+                        "value": "FB1",
+                        "externalSubjectId": {
+                            "type": "ExternalReference",
+                            "keys": []
+                        }
+                    }
+                ]
+            },
+            "submodels": [
+                {
+                    "type": "ExternalReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        }
+    ],
+    "submodels": [
+        {
+            "idShort": "Engineering_Submodel",
+            "id": "https://example.com/ids/sm/5444_7092_1042_1698",
+            "kind": "Instance",
+            "submodelElements": [
+                {
+                    "idShort": "AMLFile",
+                    "value": "/aasx/files/AML_Model_Conveyor_V5.2.aml",
+                    "contentType": "text/xml",
+                    "modelType": "File"
+                },
+                {
+                    "idShort": "CAEXVersion",
+                    "valueType": "xs:string",
+                    "value": "3.0",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "AMLElementReference",
+                    "value": {
+                        "type": "ExternalReference",
+                        "keys": [
+                            {
+                                "type": "Submodel",
+                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                            },
+                            {
+                                "type": "File",
+                                "value": "AMLFile"
+                            },
+                            {
+                                "type": "FragmentReference",
+                                "value": "AML/95809deb-3c3e-48db-9d10-69a361b8eee8"
+                            }
+                        ]
+                    },
+                    "modelType": "ReferenceElement"
+                },
+                {
+                    "idShort": "AMLDomainAttributes",
+                    "semanticIdListElement": {
+                        "type": "ModelReference",
+                        "keys": []
+                    },
+                    "typeValueListElement": "SubmodelElement",
+                    "value": [
+                        {
+                            "idShort": "IdentificationView_Attributes",
+                            "value": [
+                                {
+                                    "idShort": "ID",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "idShort": "Relationship_ID",
+                                    "first": {
+                                        "type": "ExternalReference",
+                                        "referredSemanticId": {
+                                            "type": "ModelReference",
+                                            "keys": []
+                                        },
+                                        "keys": [
+                                            {
+                                                "type": "Submodel",
+                                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                                            },
+                                            {
+                                                "type": "File",
+                                                "value": "AMLFile"
+                                            },
+                                            {
+                                                "type": "FragmentReference",
+                                                "value": "AML/de5e9423-9e0b-4e89-b7ac-36d52b6c39a8.ID"
+                                            }
+                                        ]
+                                    },
+                                    "second": {
+                                        "type": "ModelReference",
+                                        "keys": [
+                                            {
+                                                "type": "Submodel",
+                                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                                            },
+                                            {
+                                                "type": "SubmodelElementList",
+                                                "value": "AMLDomainAttributes"
+                                            },
+                                            {
+                                                "type": "SubmodelElementCollection",
+                                                "value": "IdentificationView_Attributes"
+                                            },
+                                            {
+                                                "type": "Property",
+                                                "value": "ID"
+                                            }
+                                        ]
+                                    },
+                                    "modelType": "RelationshipElement"
+                                },
+                                {
+                                    "idShort": "ConveyorType",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "idShort": "Relationship_ConveyorType",
+                                    "first": {
+                                        "type": "ExternalReference",
+                                        "keys": [
+                                            {
+                                                "type": "Submodel",
+                                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                                            },
+                                            {
+                                                "type": "File",
+                                                "value": "AMLFile"
+                                            },
+                                            {
+                                                "type": "FragmentReference",
+                                                "value": "AML/de5e9423-9e0b-4e89-b7ac-36d52b6c39a8.ConveyorType"
+                                            }
+                                        ]
+                                    },
+                                    "second": {
+                                        "type": "ExternalReference",
+                                        "keys": []
+                                    },
+                                    "modelType": "RelationshipElement"
+                                }
+                            ],
+                            "modelType": "SubmodelElementCollection"
+                        },
+                        {
+                            "idShort": "MechanicalView_Attributes",
+                            "value": [
+                                {
+                                    "idShort": "ConveyorLength",
+                                    "valueType": "xs:string",
+                                    "modelType": "Property"
+                                },
+                                {
+                                    "idShort": "Relationship_ConveyorLength",
+                                    "first": {
+                                        "type": "ExternalReference",
+                                        "keys": [
+                                            {
+                                                "type": "Submodel",
+                                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                                            },
+                                            {
+                                                "type": "File",
+                                                "value": "AMLFile"
+                                            },
+                                            {
+                                                "type": "FragmentReference",
+                                                "value": "AML/a5222342-876d-45ae-ad7c-71d6bcd34439.Length"
+                                            }
+                                        ]
+                                    },
+                                    "second": {
+                                        "type": "ModelReference",
+                                        "keys": [
+                                            {
+                                                "type": "Submodel",
+                                                "value": "https://example.com/ids/sm/5444_7092_1042_1698"
+                                            },
+                                            {
+                                                "type": "SubmodelElementList",
+                                                "value": "AMLDomainAttributes"
+                                            },
+                                            {
+                                                "type": "SubmodelElementCollection",
+                                                "value": "MechanicalView_Attributes"
+                                            },
+                                            {
+                                                "type": "Property",
+                                                "value": "ConveyorLength"
+                                            }
+                                        ]
+                                    },
+                                    "modelType": "RelationshipElement"
+                                }
+                            ],
+                            "modelType": "SubmodelElementCollection"
+                        }
+                    ],
+                    "modelType": "SubmodelElementList"
+                }
+            ],
+            "modelType": "Submodel"
+        }
+    ],
+    "conceptDescriptions": []
+}

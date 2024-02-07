@@ -1,0 +1,173 @@
+{
+  "nodes": [
+    {
+      "id": "resource-1",
+      "type": "resource",
+      "data": {
+        "label": "Main resource",
+        "props": {
+          "views": {
+            "Mechanical": {
+              "id": "mechanical_view1",
+              "properties": [
+                {
+                  "name": "Height",
+                  "id": "height",
+                  "target_value": "100",
+                  "min_value": "80",
+                  "max_value": "120",
+                  "unit": "cm",
+                  "visible": true
+                },
+                {
+                  "name": "Width",
+                  "id": "width",
+                  "target_value": "150",
+                  "min_value": "120",
+                  "max_value": "180",
+                  "unit": "cm",
+                  "visible": true
+                },
+                {
+                  "name": "Weight",
+                  "id": "weight",
+                  "target_value": "30",
+                  "min_value": "20",
+                  "max_value": "40",
+                  "unit": "kg",
+                  "visible": true
+                }
+              ]
+            },
+            "Electrical": {
+              "id": "electrical_view1",
+              "properties": [
+                {
+                  "name": "Voltage",
+                  "id": "voltage",
+                  "target_value": "220",
+                  "min_value": "200",
+                  "max_value": "240",
+                  "unit": "V",
+                  "visible": true
+                },
+                {
+                  "name": "Power",
+                  "id": "power",
+                  "target_value": "500",
+                  "min_value": "400",
+                  "max_value": "600",
+                  "unit": "W",
+                  "visible": true
+                },
+                {
+                  "name": "Plugs",
+                  "id": "plugs",
+                  "target_value": "2",
+                  "min_value": "1",
+                  "max_value": "4",
+                  "unit": "",
+                  "visible": true
+                }
+              ]
+            }
+          }
+        },
+        "style": {
+          "toolbarPosition": "bottom"
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "width": 150,
+      "height": 32
+    },
+    {
+      "id": "product-1",
+      "type": "product",
+      "data": {
+        "label": "Input Product",
+        "props": {
+          "views": {}
+        },
+        "style": {
+          "toolbarPosition": "bottom"
+        }
+      },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "width": 150,
+      "height": 32
+    },
+    {
+      "id": "process-1",
+      "type": "process",
+      "data": {
+        "label": "Process",
+        "props": {
+          "active_handle": "Not defined",
+          "views": {}
+        },
+        "style": {
+          "toolbarPosition": "bottom"
+        }
+      },
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "width": 150,
+      "height": 28
+    },
+    {
+      "id": "product-2",
+      "type": "product",
+      "data": {
+        "label": "Output Product",
+        "props": {
+          "views": {}
+        },
+        "style": {
+          "toolbarPosition": "bottom"
+        }
+      },
+      "position": {
+        "x": 100,
+        "y": 300
+      },
+      "width": 150,
+      "height": 32
+    }
+  ],
+  "edges": [
+    {
+      "id": "prod1-proc1",
+      "source": "product-1",
+      "target": "process-1",
+      "sourceHandle": "input_process_connector",
+      "targetHandle": "input_product_connector",
+      "label": "Input for",
+      "updatable": "source"
+    },
+    {
+      "id": "proc1-prod2",
+      "source": "process-1",
+      "target": "product-2",
+      "label": "Outputs",
+      "sourceHandle": "output_product_connector",
+      "targetHandle": "output_process_connector"
+    },
+    {
+      "id": "proc1-res1",
+      "source": "process-1",
+      "target": "resource-1",
+      "label": "Executed by",
+      "sourceHandle": "resource_connector",
+      "targetHandle": "process_connector"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "FB1",
+        "id": "95809deb-3c3e-48db-9d10-69a361b8eee8",
+        "submodels": [
+            {
+                "name": "IdentificationView",
+                "id": "de5e9423-9e0b-4e89-b7ac-36d52b6c39a8",
+                "properties": [
+                    {
+                        "name": "ID",
+                        "reference": "IdentificationViewSystemUnitClassLib/ConveyorBelt/ID",
+                        "value": "1234",
+                        "unit": "",
+                        "datatype": "string",
+                        "semanticId": "IRDI://0173-1%2301-AGZ247%23012"
+                    },
+                    {
+                        "name": "ManufacturerName",
+                        "reference": "IdentificationAttributeTypeLib/ManufacturerName",
+                        "value": "OvGU",
+                        "unit": "",
+                        "datatype": "string",
+                        "semanticId": "IRDI://0173-1%2302-AAO677%23003"
+                    },
+                    {
+                        "name": "ConveyorType",
+                        "reference": "IdentificationAttributeTypeLib/ConveyorType",
+                        "value": "",
+                        "unit": "",
+                        "datatype": "string",
+                        "semanticId": "IRDI://0173-1%2307-BAA421%23004"
+                    }
+                ]
+            },
+            {
+                "name": "ElenctricalView",
+                "id": "9c2c78cd-d749-430a-9261-2b4a183a7c13",
+                "properties": [
+                    {
+                        "name": "Power",
+                        "reference": "ElectricViewAttributeTypeLib/Power",
+                        "value": "50",
+                        "unit": "watt",
+                        "datatype": "double",
+                        "semanticId": "IRDI://0173-1%2302-BAB574%23006"
+                    }
+                ]
+            }
+        ]
+    }
+]
