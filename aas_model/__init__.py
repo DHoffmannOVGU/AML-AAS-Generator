@@ -1,4 +1,4 @@
-from model.generated import (
+from aas_model.generated import (
     AssetAdministrationShells,
     AssetInformation,
     ConceptDescriptions,

@@ -1,4 +1,4 @@
-from model import Generated, AssetAdministrationShells, Submodels, Keys
+from aas_model import Generated, AssetAdministrationShells, Submodels, Keys
 import json
 from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.serializers import XmlSerializer, JsonSerializer
