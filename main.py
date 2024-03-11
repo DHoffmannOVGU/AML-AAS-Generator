@@ -8,12 +8,14 @@ from tabs import (upload_graph,
                   analyze_graph, 
                   export_graph)
 
-
 def open_tab(tab_name):
-    return tab_dict[tab_name]()
+    if selected_tab in tab_dict:
+        return tab_dict[tab_name]()
+    else:
+        st.error("The selected tab is not available")
 
 if __name__ == '__main__':
-    
+
     if "node_list" not in st.session_state:
         st.session_state["node_list"] = []
     if "edge_list" not in st.session_state:
@@ -43,10 +45,7 @@ if __name__ == '__main__':
                                    orientation="vertical"
                                    )
 
-    if selected_tab in tab_dict:
-        tab_dict[selected_tab]()
-
-
+    open_tab(selected_tab)
 
 
 
